@@ -10,8 +10,14 @@
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>0</show_in_store>
-                    <comment><![CDATA[This extension will allow you to choose your starting order number, invoice number, shipment number and credit memo number. Simply enter your chosen values in the box below, click Save Config to save the settings and then run 'update' to apply the new increment ID's. The numbers will be 9 digits long, with a prefix and then your number. If you choose a number less than 9 digits long, Magento will pad it out with 0's. You can override that padding behavior by choosing Yes to disable padding. You can also choose to disable the prefix. &lt;br/&gt;&lt;br/&gt;It is SERIOUSLY important that you don't set the number back lower than existing orders, otherwise you'll end up with duplicates, and a world of hurt - you've been warned :) &lt;br/&gt;&lt;br/&gt;Any issues/feedback/bugs/feature requests welcome, please contact Ashley at &lt;a href='http://aschroder.com' target='_blank'&gt;ASchroder.com&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;]]></comment>
                     <fields>
+                        <info>
+                            <frontend_model>setstartordernumber/system_config_info</frontend_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </info>
                         <disable_padding translate="label">
                             <label><![CDATA[Disable padding]]></label>
                             <comment><![CDATA[If you set this to Yes, the padding will not be used. For example: with padding 501 becomes 5000000001, without padding it stays as 501.]]></comment>
@@ -74,7 +80,7 @@
                             <show_in_store>0</show_in_store>
                         </credit>
                         <update translate="label">
-                            <comment><![CDATA[Clicking this will update your increment ID's to the numbers you specified above (you have to save config first!). Blank numbers are left as they are. &lt;br/&gt; &lt;br/&gt; &lt;strong&gt;Note:&lt;/strong&gt; If any of the given numbers are lower than the values already in the database, you will see an error. If you are 100% sure you know what you're doing you can override the safety check, flip the switch below and save again before running this update.]]></comment>
+                            <comment><![CDATA[Clicking this will update your increment ID's to the numbers you specified above (you have to save config first!). Blank numbers are left as they are. <br/> <br/> <strong>Note:</strong> If any of the given numbers are lower than the values already in the database, you will see an error. If you are 100% sure you know what you're doing you can override the safety check, flip the switch below and save again before running this update.]]></comment>
                             <frontend_type>select</frontend_type>
                             <frontend_model>Aschroder_SetStartOrderNumber_Block_Adminhtml_Update</frontend_model>
                             <sort_order>220</sort_order>

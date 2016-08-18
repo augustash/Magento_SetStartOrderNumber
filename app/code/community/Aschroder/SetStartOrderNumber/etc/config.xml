@@ -8,11 +8,16 @@
 <config>
     <modules>
         <Aschroder_SetStartOrderNumber>
-            <version>0.3.1</version>
+            <version>0.3.2</version>
         </Aschroder_SetStartOrderNumber>
     </modules>
 
     <global>
+        <blocks>
+            <setstartordernumber>
+                <class>Aschroder_SetStartOrderNumber_Block</class>
+            </setstartordernumber>
+        </blocks>
         <helpers>
             <setstartordernumber>
                 <class>Aschroder_SetStartOrderNumber_Helper</class>

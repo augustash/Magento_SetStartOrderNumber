@@ -18,7 +18,6 @@ class Aschroder_SetStartOrderNumber_Adminhtml_SetStartOrderNumberController exte
         Mage::log("Running update for Aschroder_SetStartOrderNumber...");
 
         $collection = Mage::getModel('eav/entity_type')->getCollection();
-        $override = Mage::helper('setstartordernumber')->isOverrideEnabled();
 
         $store = $this->getRequest()->getParam('website');
         if (!$store) {
@@ -31,6 +30,9 @@ class Aschroder_SetStartOrderNumber_Adminhtml_SetStartOrderNumberController exte
         } else {
             $storeID = Mage::app()->getWebsite($store)->getId();
         }
+
+        // override needs to be website/store sensitive
+        $override = Mage::helper('setstartordernumber')->isOverrideEnabled($storeID);
 
         $objects = array(
             'order'         => Mage::helper('setstartordernumber')->getOrderNumber($storeID),

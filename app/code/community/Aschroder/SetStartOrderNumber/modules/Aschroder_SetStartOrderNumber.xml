@@ -3,7 +3,7 @@
     <modules>
         <Aschroder_SetStartOrderNumber>
             <active>true</active>
-           <codePool>community</codePool>
+            <codePool>community</codePool>
        </Aschroder_SetStartOrderNumber>
     </modules>
 </config>
